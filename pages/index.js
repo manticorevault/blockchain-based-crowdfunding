@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Card } from "semantic-ui-react";
 import factory from "../ethereum/factory";
+
 
 //Shows all the deployed Campaigns
 class CampaignIndex extends Component {
@@ -11,9 +13,24 @@ class CampaignIndex extends Component {
         return { campaigns };
     }
 
+    renderCampaigns() {
+        // Iterate over list of Campaign Address to create an object
+        const items = this.props.campaigns.map(address => {
+            return {
+                header: address,
+                description: <a>View Campaign</a>,
+                fluid: true // Stretches all the width of the container
+            };
+        });
+
+        // Render the objects as a new card component
+        return <Card.Group items={ items } />
+
+    }
+
     render() {
     // Retrieve the Campaigns object
-    return <div>{ this.props.campaigns[0] }</div>
+        return <div>{ this.renderCampaigns() }</div>;
     }
 }
 
