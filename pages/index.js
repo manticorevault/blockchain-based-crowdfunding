@@ -3,14 +3,17 @@ import factory from "../ethereum/factory";
 
 //Shows all the deployed Campaigns
 class CampaignIndex extends Component {
-    async componentDidMount() {
+    //Defines a class function within NextJS
+    static async getInitialProps() {
         const campaigns = await factory.methods.getDeployedCampaigns().call();
 
-        console.log(campaigns);
+        //Object to be provided in the component as props
+        return { campaigns };
     }
 
     render() {
-        return <div>Campaigns Index</div>
+    // Retrieve the Campaigns object
+    return <div>{ this.props.campaigns[0] }</div>
     }
 }
 
