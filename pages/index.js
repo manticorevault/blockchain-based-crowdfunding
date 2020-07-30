@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card } from "semantic-ui-react";
+import { Card, Button } from "semantic-ui-react";
 import factory from "../ethereum/factory";
 
 
@@ -30,7 +30,14 @@ class CampaignIndex extends Component {
 
     render() {
     // Retrieve the Campaigns object
-        return <div>{ this.renderCampaigns() }</div>;
+        return <div>
+            { this.renderCampaigns() }
+            <Button 
+                content="Create Campaign"
+                icon="add"
+                primary={true}
+            />
+        </div>;
     }
 }
 
