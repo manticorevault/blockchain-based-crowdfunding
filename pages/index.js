@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
 import factory from "../ethereum/factory";
+import Layout from "../components/Layout";
 
 
 //Shows all the deployed Campaigns
@@ -24,20 +25,29 @@ class CampaignIndex extends Component {
         });
 
         // Render the objects as a new card component
-        return <Card.Group items={ items } />
+        return <Card.Group items={items} />
 
     }
 
     render() {
-    // Retrieve the Campaigns object
-        return <div>
-            { this.renderCampaigns() }
-            <Button 
-                content="Create Campaign"
-                icon="add"
-                primary={true}
-            />
-        </div>;
+        // Retrieve the Campaigns object
+        return (
+            <Layout>
+                <div>
+                    <h3> Open Campaigns </h3>
+
+                    <Button
+                        content="Create Campaign"
+                        icon="add"
+                        floated="right"
+                        primary={true}
+                    />
+
+                    {this.renderCampaigns()}
+                </div>
+            </Layout>
+        );
+
     }
 }
 
