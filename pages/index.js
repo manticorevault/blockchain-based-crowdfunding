@@ -12,7 +12,7 @@ class CampaignIndex extends Component {
 
         //Object to be provided in the component as props
         return { campaigns };
-    }
+    };
 
     renderCampaigns() {
         // Iterate over list of Campaign Address to create an object
@@ -27,7 +27,7 @@ class CampaignIndex extends Component {
         // Render the objects as a new card component
         return <Card.Group items={items} />
 
-    }
+    };
 
     render() {
         // Retrieve the Campaigns object
@@ -48,7 +48,7 @@ class CampaignIndex extends Component {
             </Layout>
         );
 
-    }
-}
+    };
+};
 
 export default CampaignIndex;
