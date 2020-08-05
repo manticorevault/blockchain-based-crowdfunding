@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Card, Button } from "semantic-ui-react";
 import factory from "../ethereum/factory";
 import Layout from "../components/Layout";
-
+import { Link } from "../routes";
 
 //Shows all the deployed Campaigns
 class CampaignIndex extends Component {
@@ -19,7 +19,12 @@ class CampaignIndex extends Component {
         const items = this.props.campaigns.map(address => {
             return {
                 header: address,
-                description: <a>View Campaign</a>,
+                description: (
+                    <Link route={`/campaigns/${address}`}>
+                        <a>View Campaign</a>
+                    </Link>
+
+                ),
                 fluid: true // Stretches all the width of the container
             };
         });
@@ -36,12 +41,16 @@ class CampaignIndex extends Component {
                 <div>
                     <h3> Open Campaigns </h3>
 
-                    <Button
-                        content="Create Campaign"
-                        icon="add"
-                        floated="right"
-                        primary={true}
-                    />
+                    <Link route="/campaigns/new">
+                        <a>
+                            <Button
+                                content="Create Campaign"
+                                icon="add"
+                                floated="right"
+                                primary={true}
+                            />
+                        </a>
+                    </Link>
 
                     {this.renderCampaigns()}
                 </div>
