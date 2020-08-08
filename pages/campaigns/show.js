@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Layout from "../../components/Layout"
 
 class CampaignShow extends Component {
     render() {
-        return <h3> Single Page </h3>
+        return (
+            <Layout>
+                <h3> Single Page </h3>
+            </Layout>
+        )
     }
 }
 
