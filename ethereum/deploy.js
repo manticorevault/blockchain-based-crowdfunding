@@ -7,8 +7,8 @@ let mnemonic = process.env.MNEMONIC
 let accessToken = process.env.TOKEN
 
 const provider = new HDWalletProvider(
-    process.env.MNEMONIC,
-    process.env.ADDRESS
+    mnemonic,
+    accessToken
 );
 
 const web3 = new Web3(provider);
