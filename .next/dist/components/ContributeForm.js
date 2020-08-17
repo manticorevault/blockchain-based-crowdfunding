@@ -69,7 +69,9 @@ var ContributeForm = function (_Component) {
         }
 
         return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = ContributeForm.__proto__ || (0, _getPrototypeOf2.default)(ContributeForm)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            value: ""
+            value: "",
+            errorMessage: "",
+            loading: false
         }, _this.onSubmit = function () {
             var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(event) {
                 var campaign, accounts;
@@ -79,34 +81,43 @@ var ContributeForm = function (_Component) {
                             case 0:
                                 event.preventDefault();
                                 campaign = (0, _campaign2.default)(_this.props.address);
-                                _context.prev = 2;
-                                _context.next = 5;
+
+                                _this.setState({ loading: true, errorMessage: "" });
+
+                                _context.prev = 3;
+                                _context.next = 6;
                                 return _web2.default.eth.getAccounts();
 
-                            case 5:
+                            case 6:
                                 accounts = _context.sent;
-                                _context.next = 8;
+                                _context.next = 9;
                                 return campaign.methods.contribute().send({
                                     from: accounts[0],
                                     value: _web2.default.utils.toWei(_this.state.value, "ether")
                                 });
 
-                            case 8:
+                            case 9:
 
                                 _routes.Router.replaceRoute("/campaigns/" + _this.props.address);
-                                _context.next = 13;
+                                _context.next = 15;
                                 break;
 
-                            case 11:
-                                _context.prev = 11;
-                                _context.t0 = _context["catch"](2);
+                            case 12:
+                                _context.prev = 12;
+                                _context.t0 = _context["catch"](3);
 
-                            case 13:
+                                _this.setState({ errorMessage: _context.t0.message });
+
+                            case 15:
+
+                                _this.setState({ loading: false, value: "" });
+
+                            case 16:
                             case "end":
                                 return _context.stop();
                         }
                     }
-                }, _callee, _this2, [[2, 11]]);
+                }, _callee, _this2, [[3, 12]]);
             }));
 
             return function (_x) {
@@ -120,19 +131,19 @@ var ContributeForm = function (_Component) {
         value: function render() {
             var _this3 = this;
 
-            return _react2.default.createElement(_semanticUiReact.Form, { onSubmit: this.onSubmit, __source: {
+            return _react2.default.createElement(_semanticUiReact.Form, { onSubmit: this.onSubmit, error: !!this.state.errorMessage, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 31
+                    lineNumber: 37
                 }
             }, _react2.default.createElement(_semanticUiReact.Form.Field, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 32
+                    lineNumber: 38
                 }
             }, _react2.default.createElement("label", {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 33
+                    lineNumber: 39
                 }
             }, " Amount to Contribute "), _react2.default.createElement(_semanticUiReact.Input, {
                 label: "ether",
@@ -143,11 +154,15 @@ var ContributeForm = function (_Component) {
                 },
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 34
+                    lineNumber: 40
                 }
-            })), _react2.default.createElement(_semanticUiReact.Button, { primary: true, __source: {
+            })), _react2.default.createElement(_semanticUiReact.Message, { error: true, header: "Oops! Something odd happened here ):", content: this.state.errorMessage, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 41
+                    lineNumber: 48
+                }
+            }), _react2.default.createElement(_semanticUiReact.Button, { primary: true, loading: this.state.loading, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
                 }
             }, "Contribute!"));
         }
@@ -157,4 +172,4 @@ var ContributeForm = function (_Component) {
 }(_react.Component);
 
 exports.default = ContributeForm;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQ29udHJpYnV0ZUZvcm0uanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJGb3JtIiwiSW5wdXQiLCJNZXNzYWdlIiwiQnV0dG9uIiwiQ2FtcGFpZ24iLCJ3ZWIzIiwiUm91dGVyIiwiQ29udHJpYnV0ZUZvcm0iLCJzdGF0ZSIsInZhbHVlIiwib25TdWJtaXQiLCJldmVudCIsInByZXZlbnREZWZhdWx0IiwiY2FtcGFpZ24iLCJwcm9wcyIsImFkZHJlc3MiLCJldGgiLCJnZXRBY2NvdW50cyIsImFjY291bnRzIiwibWV0aG9kcyIsImNvbnRyaWJ1dGUiLCJzZW5kIiwiZnJvbSIsInV0aWxzIiwidG9XZWkiLCJyZXBsYWNlUm91dGUiLCJzZXRTdGF0ZSIsInRhcmdldCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTLEFBQU0sQUFBTyxBQUFTOztBQUMvQixBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTyxBQUFVOzs7O0FBQ2pCLEFBQVMsQUFBYzs7Ozs7OztJQUVqQixBOzs7Ozs7Ozs7Ozs7Ozs7Z09BQ0YsQTttQkFDVSxBLEFBREY7QUFBQSxBQUNKLGlCLEFBR0o7aUdBQVcsaUJBQUEsQUFBTyxPQUFQOzhCQUFBOzhFQUFBOzhCQUFBO3lEQUFBO2lDQUNQO3NDQUFBLEFBQU0sQUFDQTtBQUZDLDJDQUVVLHdCQUFTLE1BQUEsQUFBSyxNQUZ4QixBQUVVLEFBQW9CO2dEQUY5QjtnREFBQTt1Q0FLb0IsY0FBQSxBQUFLLElBTHpCLEFBS29CLEFBQVM7O2lDQUExQjtBQUxILG9EQUFBO2dEQUFBO2dEQU1HLEFBQVMsUUFBVCxBQUFpQixhQUFqQixBQUE4QjswQ0FDMUIsU0FEK0IsQUFDL0IsQUFBUyxBQUNmOzJDQUFPLGNBQUEsQUFBSyxNQUFMLEFBQVcsTUFBTSxNQUFBLEFBQUssTUFBdEIsQUFBNEIsT0FScEMsQUFNRyxBQUFtQyxBQUU5QixBQUFtQztBQUZMLEFBQ3JDLGlDQURFOztpQ0FLTjs7K0NBQUEsQUFBTyw2QkFBMkIsTUFBQSxBQUFLLE1BWHBDLEFBV0gsQUFBNkM7Z0RBWDFDO0FBQUE7O2lDQUFBO2dEQUFBO2dFQUFBOztpQ0FBQTtpQ0FBQTtnREFBQTs7QUFBQTt5Q0FBQTtBOzs7Ozs7Ozs7O2lDQWlCRjt5QkFDTDs7bUNBQ0ksQUFBQyx1Q0FBSyxVQUFVLEtBQWhCLEFBQXFCOzhCQUFyQjtnQ0FBQSxBQUNJO0FBREo7YUFBQSxrQkFDSyxjQUFELHNCQUFBLEFBQU07OzhCQUFOO2dDQUFBLEFBQ0k7QUFESjtBQUFBLCtCQUNJLGNBQUE7OzhCQUFBO2dDQUFBO0FBQUE7QUFBQSxlQURKLEFBQ0ksQUFDQSwyQ0FBQSxBQUFDO3VCQUFELEFBQ1UsQUFDTjsrQkFGSixBQUVrQixBQUNkO3VCQUFPLEtBQUEsQUFBSyxNQUhoQixBQUdzQixBQUNsQjswQkFBVSx5QkFBQTsyQkFBUyxPQUFBLEFBQUssU0FBUyxFQUFFLE9BQU8sTUFBQSxBQUFNLE9BQXRDLEFBQVMsQUFBYyxBQUFzQjtBQUozRDs7OEJBQUE7Z0NBSFIsQUFDSSxBQUVJLEFBT0o7QUFQSTtBQUNJLGlDQU1SLEFBQUMseUNBQU8sU0FBUjs4QkFBQTtnQ0FBQTtBQUFBO2VBWFIsQUFDSSxBQVVJLEFBTVg7Ozs7O0FBeEN3QixBLEFBMkM3Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJDb250cmlidXRlRm9ybS5qcyIsInNvdXJjZVJvb3QiOiIvaG9tZS9hcnR1ci9Eb2N1bWVudHMvZXRoZXJldW1fc29saWRpdHlfZGV2ZWxvcGVyL2Jsb2NrY2hhaW4tYmFzZWQtY3Jvd2RmdW5kaW5nIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQ29udHJpYnV0ZUZvcm0uanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJGb3JtIiwiSW5wdXQiLCJNZXNzYWdlIiwiQnV0dG9uIiwiQ2FtcGFpZ24iLCJ3ZWIzIiwiUm91dGVyIiwiQ29udHJpYnV0ZUZvcm0iLCJzdGF0ZSIsInZhbHVlIiwiZXJyb3JNZXNzYWdlIiwibG9hZGluZyIsIm9uU3VibWl0IiwiZXZlbnQiLCJwcmV2ZW50RGVmYXVsdCIsImNhbXBhaWduIiwicHJvcHMiLCJhZGRyZXNzIiwic2V0U3RhdGUiLCJldGgiLCJnZXRBY2NvdW50cyIsImFjY291bnRzIiwibWV0aG9kcyIsImNvbnRyaWJ1dGUiLCJzZW5kIiwiZnJvbSIsInV0aWxzIiwidG9XZWkiLCJyZXBsYWNlUm91dGUiLCJtZXNzYWdlIiwidGFyZ2V0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVMsQUFBTSxBQUFPLEFBQVM7O0FBQy9CLEFBQU8sQUFBYzs7OztBQUNyQixBQUFPLEFBQVU7Ozs7QUFDakIsQUFBUyxBQUFjOzs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7Ozs7OztnTyxBQUNGO21CQUFRLEFBQ0UsQUFDTjswQkFGSSxBQUVVLEFBQ2Q7cUJBQVMsQSxBQUhMO0FBQUEsQUFDSixpQixBQUtKO2lHQUFXLGlCQUFBLEFBQU8sT0FBUDs4QkFBQTs4RUFBQTs4QkFBQTt5REFBQTtpQ0FDUDtzQ0FBQSxBQUFNLEFBQ0E7QUFGQywyQ0FFVSx3QkFBUyxNQUFBLEFBQUssTUFGeEIsQUFFVSxBQUFvQixBQUVyQzs7c0NBQUEsQUFBSyxTQUFTLEVBQUUsU0FBRixBQUFXLE1BQU0sY0FKeEIsQUFJUCxBQUFjLEFBQStCOztnREFKdEM7Z0RBQUE7dUNBT29CLGNBQUEsQUFBSyxJQVB6QixBQU9vQixBQUFTOztpQ0FBMUI7QUFQSCxvREFBQTtnREFBQTtnREFRRyxBQUFTLFFBQVQsQUFBaUIsYUFBakIsQUFBOEI7MENBQzFCLFNBRCtCLEFBQy9CLEFBQVMsQUFDZjsyQ0FBTyxjQUFBLEFBQUssTUFBTCxBQUFXLE1BQU0sTUFBQSxBQUFLLE1BQXRCLEFBQTRCLE9BVnBDLEFBUUcsQUFBbUMsQUFFOUIsQUFBbUM7QUFGTCxBQUNyQyxpQ0FERTs7aUNBS047OytDQUFBLEFBQU8sNkJBQTJCLE1BQUEsQUFBSyxNQWJwQyxBQWFILEFBQTZDO2dEQWIxQztBQUFBOztpQ0FBQTtnREFBQTtnRUFlSDs7c0NBQUEsQUFBSyxTQUFTLEVBQUUsY0FBYyxZQWYzQixBQWVILEFBQWMsQUFBb0I7O2lDQUd0Qzs7c0NBQUEsQUFBSyxTQUFTLEVBQUUsU0FBRixBQUFXLE9BQU8sT0FsQnpCLEFBa0JQLEFBQWMsQUFBeUI7O2lDQWxCaEM7aUNBQUE7Z0RBQUE7O0FBQUE7eUNBQUE7QTs7Ozs7Ozs7OztpQ0FxQkY7eUJBQ0w7O21DQUNJLEFBQUMsdUNBQUssVUFBVSxLQUFoQixBQUFxQixVQUFVLE9BQU8sQ0FBQyxDQUFDLEtBQUEsQUFBSyxNQUE3QyxBQUFtRDs4QkFBbkQ7Z0NBQUEsQUFDSTtBQURKO2FBQUEsa0JBQ0ssY0FBRCxzQkFBQSxBQUFNOzs4QkFBTjtnQ0FBQSxBQUNJO0FBREo7QUFBQSwrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFESixBQUNJLEFBQ0EsMkNBQUEsQUFBQzt1QkFBRCxBQUNVLEFBQ047K0JBRkosQUFFa0IsQUFDZDt1QkFBTyxLQUFBLEFBQUssTUFIaEIsQUFHc0IsQUFDbEI7MEJBQVUseUJBQUE7MkJBQVMsT0FBQSxBQUFLLFNBQVMsRUFBRSxPQUFPLE1BQUEsQUFBTSxPQUF0QyxBQUFTLEFBQWMsQUFBc0I7QUFKM0Q7OzhCQUFBO2dDQUhSLEFBQ0ksQUFFSSxBQVFKO0FBUkk7QUFDSSxpQ0FPUixBQUFDLDBDQUFRLE9BQVQsTUFBZSxRQUFmLEFBQXNCLHdDQUF1QyxTQUFTLEtBQUEsQUFBSyxNQUEzRSxBQUFpRjs4QkFBakY7Z0NBWEosQUFXSSxBQUNBO0FBREE7Z0NBQ0EsQUFBQyx5Q0FBTyxTQUFSLE1BQWdCLFNBQVMsS0FBQSxBQUFLLE1BQTlCLEFBQW9DOzhCQUFwQztnQ0FBQTtBQUFBO2VBYlIsQUFDSSxBQVlJLEFBTVg7Ozs7O0FBaER3QixBLEFBbUQ3Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJDb250cmlidXRlRm9ybS5qcyIsInNvdXJjZVJvb3QiOiIvaG9tZS9hcnR1ci9Eb2N1bWVudHMvZXRoZXJldW1fc29saWRpdHlfZGV2ZWxvcGVyL2Jsb2NrY2hhaW4tYmFzZWQtY3Jvd2RmdW5kaW5nIn0=
