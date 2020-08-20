@@ -26,6 +26,7 @@ class RequestIndex extends Component {
         return this.props.requests.map((request, index) => {
             return <RequestRow
                 request={request}
+                id={index}
                 key={index}
                 address={this.props.address}
              />;
