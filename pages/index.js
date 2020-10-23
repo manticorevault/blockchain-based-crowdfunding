@@ -4,13 +4,13 @@ import factory from "../ethereum/factory";
 import Layout from "../components/Layout";
 import { Link } from "../routes";
 
-//Shows all the deployed Campaigns
+// Shows all the deployed Campaigns
 class CampaignIndex extends Component {
-    //Defines a class function within NextJS
+    // Defines a class function within NextJS
     static async getInitialProps() {
         const campaigns = await factory.methods.getDeployedCampaigns().call();
 
-        //Object to be provided in the component as props
+        // Object to be provided in the component as props
         return { campaigns };
     };
 
