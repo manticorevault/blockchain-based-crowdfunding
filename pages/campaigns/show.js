@@ -69,7 +69,7 @@ class CampaignShow extends Component {
     render() {
         return (
             <Layout>
-                <h3> Single Page </h3>
+                <h3> Projeto </h3>
                 <Grid>
                     <Grid.Row>
                         <Grid.Column width={10}>
@@ -85,7 +85,7 @@ class CampaignShow extends Component {
                         <Grid.Column>
                             <Link route={`/campaigns/${this.props.address}/requests`}>
                                 <a>
-                                    <Button primary> View Requests </Button>
+                                    <Button primary> Ver Requisicoes </Button>
                                 </a>
                             </Link>
                         </Grid.Column>

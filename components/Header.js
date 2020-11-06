@@ -15,7 +15,7 @@ export default () => {
 
                 <Link route="/">
                     <a className="item">
-                        Campaigns
+                        Projetos
                     </a>
                 </Link>
 

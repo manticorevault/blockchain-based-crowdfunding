@@ -6,7 +6,7 @@ import { Router } from "../routes";
 
 class ContributeForm extends Component {
     state = {
-        value:"",
+        value: "",
         errorMessage: "",
         loading: false
     };
@@ -25,7 +25,7 @@ class ContributeForm extends Component {
             });
 
             Router.replaceRoute(`/campaigns/${this.props.address}`)
-        } catch(err) {
+        } catch (err) {
             this.setState({ errorMessage: err.message })
         }
 
@@ -33,11 +33,11 @@ class ContributeForm extends Component {
     };
 
     render() {
-        return(
+        return (
             <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                 <Form.Field>
-                    <label> Amount to Contribute </label>
-                    <Input 
+                    <label> Valor da Contribuicao </label>
+                    <Input
                         label="ether"
                         labelPosition="right"
                         value={this.state.value}
@@ -47,7 +47,7 @@ class ContributeForm extends Component {
 
                 <Message error header="Oops! Something odd happened here ):" content={this.state.errorMessage} />
                 <Button primary loading={this.state.loading}>
-                    Contribute!
+                    Contribua!
                 </Button>
             </Form>
         );
