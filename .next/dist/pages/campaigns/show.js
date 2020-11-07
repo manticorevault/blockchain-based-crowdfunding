@@ -82,28 +82,29 @@ var CampaignShow = function (_Component) {
 
             var items = [{
                 header: manager,
-                meta: "Manager's Address",
-                description: "Manager created this campaign and they can create requests to withdraw money",
+                meta: "Endereco do Gerente",
+                description: "O gerente foi aquele que criou esse projeto e ele pode criar requesicoes para retirar o dinheiro",
                 style: { overflowWrap: "break-word" }
             }, {
                 header: minimumContribution,
-                meta: "Minium Contribution (Wei)",
-                description: "This is the minium amount you need to contribute to become an approver"
+                meta: "Contribuicao Minima (Wei)",
+                description: "Essa e' a quantidade minima que voce precisa fornecer para se tornar um contribuinte"
             }, {
                 header: requestsCount,
-                meta: "Number of requests",
+                meta: "Numero de Requisicoes",
                 description: "A request tries to withdraw money from the contract. It must be approved by the approvers"
             }, {
                 header: approversCount,
-                meta: "Number of approvers",
+                meta: "Numero de Contribuintes",
                 description: "Number of people that already donated to this campaign"
             }, {
                 header: _web2.default.utils.fromWei(balance, "ether"),
-                meta: "Campaign Balance (In Ether)",
+                meta: "Saldo da Campanha (In Ether)",
                 description: "The balance is how much money this campaign still has available to spend"
             }];
 
-            return _react2.default.createElement(_semanticUiReact.Card.Group, { items: items, __source: {
+            return _react2.default.createElement(_semanticUiReact.Card.Group, {
+                items: items, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 66
                 }
@@ -132,15 +133,18 @@ var CampaignShow = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 74
                 }
-            }, _react2.default.createElement(_semanticUiReact.Grid.Column, { width: 10, __source: {
+            }, _react2.default.createElement(_semanticUiReact.Grid.Column, {
+                width: 10, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 75
                 }
-            }, this.renderCards()), _react2.default.createElement(_semanticUiReact.Grid.Column, { width: 6, __source: {
+            }, this.renderCards()), _react2.default.createElement(_semanticUiReact.Grid.Column, {
+                width: 6, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 79
                 }
-            }, _react2.default.createElement(_ContributeForm2.default, { address: this.props.address, __source: {
+            }, _react2.default.createElement(_ContributeForm2.default, {
+                address: this.props.address, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 80
                 }
@@ -154,7 +158,8 @@ var CampaignShow = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 85
                 }
-            }, _react2.default.createElement(_routes.Link, { route: "/campaigns/" + this.props.address + "/requests", __source: {
+            }, _react2.default.createElement(_routes.Link, {
+                route: "/campaigns/" + this.props.address + "/requests", __source: {
                     fileName: _jsxFileName,
                     lineNumber: 86
                 }
@@ -163,7 +168,8 @@ var CampaignShow = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 87
                 }
-            }, _react2.default.createElement(_semanticUiReact.Button, { primary: true, __source: {
+            }, _react2.default.createElement(_semanticUiReact.Button, {
+                primary: true, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 88
                 }
