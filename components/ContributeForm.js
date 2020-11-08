@@ -46,7 +46,7 @@ class ContributeForm extends Component {
                 </Form.Field>
 
                 <Message error header="Oops! Something odd happened here ):" content={this.state.errorMessage} />
-                <Button primary loading={this.state.loading}>
+                <Button color="green" loading={this.state.loading}>
                     Contribua!
                 </Button>
             </Form>
