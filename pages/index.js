@@ -39,9 +39,6 @@ class CampaignIndex extends Component {
         return (
             <Layout>
                 <div>
-                    <div className="jumbotron">
-
-                    </div>
                     <h3> Open Campaigns </h3>
 
                     <Link route="/campaigns/new">
