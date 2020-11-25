@@ -14,7 +14,7 @@ class RequestIndex extends Component {
 
         const requests = await Promise.all(
             Array(parseInt(requestCount)).fill().map((element, index) => {
-                return campaign.methods.requests(index).call(); 
+                return campaign.methods.requests(index).call();
             })
         );
 
@@ -31,7 +31,7 @@ class RequestIndex extends Component {
                 key={index}
                 address={this.props.address}
                 approversCount={this.props.approversCount}
-             />;
+            />;
         });
     }
 
@@ -43,7 +43,7 @@ class RequestIndex extends Component {
                 <h3>Requests</h3>
                 <Link route={`/campaigns/${this.props.address}/requests/new`}>
                     <a>
-                        <Button primary floated="left" style={{ marginBottom: 10 }}> Add Request </Button>
+                        <Button primary floated="left" style={{ marginBottom: 10 }}> Criar Requisicao </Button>
                     </a>
                 </Link>
 
@@ -53,29 +53,29 @@ class RequestIndex extends Component {
                             <HeaderCell>
                                 ID
                             </HeaderCell>
-                                
+
                             <HeaderCell>
-                                Description
-                            </HeaderCell>
-                                
-                            <HeaderCell>    
-                                Amount
+                                Descricao
                             </HeaderCell>
 
                             <HeaderCell>
-                                Recipient
+                                Quantidade
                             </HeaderCell>
 
                             <HeaderCell>
-                                Approval
+                                Recipiente
                             </HeaderCell>
 
                             <HeaderCell>
-                                Approve
+                                Aprovacao
                             </HeaderCell>
 
                             <HeaderCell>
-                                Finalize
+                                Aprovar
+                            </HeaderCell>
+
+                            <HeaderCell>
+                                Finalizar
                             </HeaderCell>
                         </Row>
                     </Header>
@@ -85,7 +85,7 @@ class RequestIndex extends Component {
                     </Body>
                 </Table>
                 <div>
-                    There are { this.props.requestCount } requests
+                    Existem {this.props.requestCount} requisicoes
                 </div>
             </Layout>
         );

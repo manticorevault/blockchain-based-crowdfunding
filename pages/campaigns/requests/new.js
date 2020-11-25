@@ -23,7 +23,7 @@ class RequestNew extends Component {
 
     onSubmit = async event => {
         event.preventDefault();
-        
+
         const campaign = Campaign(this.props.address);
         const { description, value, recipient } = this.state;
 
@@ -34,9 +34,9 @@ class RequestNew extends Component {
             await campaign.methods
                 .createRequest(description, web3.utils.toWei(value, "ether"), recipient)
                 .send({ from: accounts[0] });
-            
+
             Router.pushRoute(`/campaigns/${this.props.address}/requests`);
-            
+
         } catch (err) {
             this.setState({ errorMessage: err.message });
         }
@@ -50,14 +50,14 @@ class RequestNew extends Component {
 
                 <Link route={`/campaigns/${this.props.address}/requests`}>
                     <a>
-                        Go Back
+                        Voltar
                     </a>
                 </Link>
 
-                <h3>Create a Request</h3>
+                <h3>Criar uma Requisicao</h3>
                 <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                     <Form.Field>
-                        <label> Description </label>
+                        <label> Descricao </label>
                         <Input
                             value={this.state.description}
                             onChange={event => this.setState({ description: event.target.value })}
@@ -65,7 +65,7 @@ class RequestNew extends Component {
                     </Form.Field>
 
                     <Form.Field>
-                        <label> Amount in Ether </label>
+                        <label> Quantia em Ether </label>
                         <Input
                             value={this.state.value}
                             onChange={event => this.setState({ value: event.target.value })}
@@ -73,7 +73,7 @@ class RequestNew extends Component {
                     </Form.Field>
 
                     <Form.Field>
-                        <label> Recipient Address </label>
+                        <label> Endereco do Recipiente </label>
                         <Input
                             value={this.state.recipient}
                             onChange={event => this.setState({ recipient: event.target.value })}
@@ -82,7 +82,7 @@ class RequestNew extends Component {
 
                     <Message error header="Oops!" content={this.state.errorMessage} />
                     <Button primary loading={this.state.loading}>
-                        Create!
+                        Criar!
                 </Button>
                 </Form>
             </Layout>

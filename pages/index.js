@@ -21,7 +21,7 @@ class CampaignIndex extends Component {
                 header: address,
                 description: (
                     <Link route={`/campaigns/${address}`}>
-                        <a>View Campaign</a>
+                        <a>Ver Projeto</a>
                     </Link>
 
                 ),
@@ -39,20 +39,28 @@ class CampaignIndex extends Component {
         return (
             <Layout>
                 <div>
-                    <h3> Open Campaigns </h3>
 
-                    <Link route="/campaigns/new">
-                        <a>
-                            <Button
-                                content="Create Campaign"
-                                icon="add"
-                                floated="right"
-                                primary={true}
-                            />
-                        </a>
-                    </Link>
+                    <div>
+                        <h1> Links </h1>
+                        <h5> Governanca de Projetos</h5>
+                    </div>
+                    <hr />
+                    <div>
+                        <h3> Projetos Abertos </h3>
 
-                    {this.renderCampaigns()}
+                        <Link route="/campaigns/new">
+                            <a>
+                                <Button
+                                    content="Criar Projetos"
+                                    icon="add"
+                                    floated="right"
+                                    primary={true}
+                                />
+                            </a>
+                        </Link>
+
+                        {this.renderCampaigns()}
+                    </div>
                 </div>
             </Layout>
         );

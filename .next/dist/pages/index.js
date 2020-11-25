@@ -80,7 +80,7 @@ var CampaignIndex = function (_Component) {
                             fileName: _jsxFileName,
                             lineNumber: 24
                         }
-                    }, "View Campaign")),
+                    }, "Ver Projeto")),
                     fluid: true // Stretches all the width of the container
                 };
             });
@@ -106,34 +106,55 @@ var CampaignIndex = function (_Component) {
                     fileName: _jsxFileName,
                     lineNumber: 41
                 }
-            }, _react2.default.createElement("div", { className: "jumbotron", __source: {
+            }, _react2.default.createElement("div", {
+                __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 42
+                    lineNumber: 43
                 }
-            }), _react2.default.createElement("h3", {
+            }, _react2.default.createElement("h1", {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 44
+                }
+            }, " Links "), _react2.default.createElement("h5", {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 45
                 }
-            }, " Open Campaigns "), _react2.default.createElement(_routes.Link, { route: "/campaigns/new", __source: {
+            }, " Governanca de Projetos")), _react2.default.createElement("hr", {
+                __source: {
                     fileName: _jsxFileName,
                     lineNumber: 47
                 }
-            }, _react2.default.createElement("a", {
+            }), _react2.default.createElement("div", {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 48
                 }
+            }, _react2.default.createElement("h3", {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 49
+                }
+            }, " Projetos Abertos "), _react2.default.createElement(_routes.Link, { route: "/campaigns/new", __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 51
+                }
+            }, _react2.default.createElement("a", {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 52
+                }
             }, _react2.default.createElement(_semanticUiReact.Button, {
-                content: "Create Campaign",
+                content: "Criar Projetos",
                 icon: "add",
                 floated: "right",
                 primary: true,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 49
+                    lineNumber: 53
                 }
-            }))), this.renderCampaigns()));
+            }))), this.renderCampaigns())));
         }
     }], [{
         key: "getInitialProps",
@@ -175,4 +196,4 @@ var CampaignIndex = function (_Component) {
 ;
 
 exports.default = CampaignIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJMYXlvdXQiLCJMaW5rIiwiQ2FtcGFpZ25JbmRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaWducyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUyxBQUFNOztBQUNmLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQVk7Ozs7QUFDbkIsQUFBUyxBQUFZOzs7Ozs7O0FBRXJCOztJLEFBQ007Ozs7Ozs7Ozs7OzBDQVNnQixBQUNkO0FBQ0E7Z0JBQU0sYUFBUSxBQUFLLE1BQUwsQUFBVyxVQUFYLEFBQXFCLElBQUksbUJBQVcsQUFDOUM7OzRCQUFPLEFBQ0ssQUFDUjtpREFDSSxBQUFDLDhCQUFLLHVCQUFOLEFBQTJCO3NDQUEzQjt3Q0FBQSxBQUNJO0FBREo7cUJBQUEsa0JBQ0ksY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHVCQUpMLEFBR0MsQUFDSSxBQUlSOzJCQVJHLEFBUUksS0FSWCxBQUFPLEFBUVMsQUFFbkI7QUFWVSxBQUNIO0FBRlIsQUFBYyxBQWFkLGFBYmM7O0FBY2Q7aURBQU8sQUFBQyxzQkFBRCxBQUFNLFNBQU0sT0FBWixBQUFtQjs4QkFBbkI7Z0NBQVAsQUFBTyxBQUVWO0FBRlU7YUFBQTs7OztpQ0FJRixBQUNMO0FBQ0E7bUNBQ0ksQUFBQzs7OEJBQUQ7Z0NBQUEsQUFDSTtBQURKO0FBQUEsYUFBQSxrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNJO0FBREo7QUFBQSxzREFDUyxXQUFMLEFBQWU7OEJBQWY7Z0NBREosQUFDSSxBQUdBO0FBSEE7Z0NBR0EsY0FBQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBSkosQUFJSSxBQUVBLHFDQUFBLEFBQUMsOEJBQUssT0FBTixBQUFZOzhCQUFaO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNJO0FBREo7QUFBQSwrQkFDSSxBQUFDO3lCQUFELEFBQ1ksQUFDUjtzQkFGSixBQUVTLEFBQ0w7eUJBSEosQUFHWSxBQUNSO3lCQUpKLEFBSWE7OzhCQUpiO2dDQVJaLEFBTUksQUFDSSxBQUNJLEFBU1A7QUFUTztBQUNJLHVCQVh4QixBQUNJLEFBQ0ksQUFpQkssQUFBSyxBQUtyQjs7O2FBdEREOzs7Ozs7Ozs7Ozt1Q0FFNEIsa0JBQUEsQUFBUSxRQUFSLEFBQWdCLHVCLEFBQWhCLEFBQXVDOztpQ0FBekQ7QTtpRUFHQyxFQUFFLFcsQUFBRjs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBLEFBTmE7O0FBd0QzQixBQUVEOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9ob21lL2FydHVyL0RvY3VtZW50cy9ldGhlcmV1bV9zb2xpZGl0eV9kZXZlbG9wZXIvYmxvY2tjaGFpbi1iYXNlZC1jcm93ZGZ1bmRpbmcifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsImZhY3RvcnkiLCJMYXlvdXQiLCJMaW5rIiwiQ2FtcGFpZ25JbmRleCIsIml0ZW1zIiwicHJvcHMiLCJjYW1wYWlnbnMiLCJtYXAiLCJoZWFkZXIiLCJhZGRyZXNzIiwiZGVzY3JpcHRpb24iLCJmbHVpZCIsInJlbmRlckNhbXBhaWducyIsIm1ldGhvZHMiLCJnZXREZXBsb3llZENhbXBhaWducyIsImNhbGwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUyxBQUFNOztBQUNmLEFBQU8sQUFBYTs7OztBQUNwQixBQUFPLEFBQVk7Ozs7QUFDbkIsQUFBUyxBQUFZOzs7Ozs7O0FBRXJCOztJLEFBQ007Ozs7Ozs7Ozs7OzBDQVNnQixBQUNkO0FBQ0E7Z0JBQU0sYUFBUSxBQUFLLE1BQUwsQUFBVyxVQUFYLEFBQXFCLElBQUksbUJBQVcsQUFDOUM7OzRCQUFPLEFBQ0ssQUFDUjtpREFDSSxBQUFDLDhCQUFLLHVCQUFOLEFBQTJCO3NDQUEzQjt3Q0FBQSxBQUNJO0FBREo7cUJBQUEsa0JBQ0ksY0FBQTs7c0NBQUE7d0NBQUE7QUFBQTtBQUFBLHVCQUpMLEFBR0MsQUFDSSxBQUlSOzJCQVJHLEFBUUksS0FSWCxBQUFPLEFBUVMsQUFFbkI7QUFWVSxBQUNIO0FBRlIsQUFBYyxBQWFkLGFBYmM7O0FBY2Q7aURBQU8sQUFBQyxzQkFBRCxBQUFNLFNBQU0sT0FBWixBQUFtQjs4QkFBbkI7Z0NBQVAsQUFBTyxBQUVWO0FBRlU7YUFBQTs7OztpQ0FJRixBQUNMO0FBQ0E7bUNBQ0ksQUFBQzs7OEJBQUQ7Z0NBQUEsQUFDSTtBQURKO0FBQUEsYUFBQSxrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUVJO0FBRko7QUFBQSwrQkFFSSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNJO0FBREo7QUFBQSwrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQTtBQUFBO0FBQUEsZUFESixBQUNJLEFBQ0EsNEJBQUEsY0FBQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBSlIsQUFFSSxBQUVJLEFBRUo7OzhCQUFBO2dDQU5KLEFBTUksQUFDQTtBQURBO0FBQUEsZ0NBQ0EsY0FBQTs7OEJBQUE7Z0NBQUEsQUFDSTtBQURKO0FBQUEsK0JBQ0ksY0FBQTs7OEJBQUE7Z0NBQUE7QUFBQTtBQUFBLGVBREosQUFDSSxBQUVBLHVDQUFBLEFBQUMsOEJBQUssT0FBTixBQUFZOzhCQUFaO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxjQUFBOzs4QkFBQTtnQ0FBQSxBQUNJO0FBREo7QUFBQSwrQkFDSSxBQUFDO3lCQUFELEFBQ1ksQUFDUjtzQkFGSixBQUVTLEFBQ0w7eUJBSEosQUFHWSxBQUNSO3lCQUpKLEFBSWE7OzhCQUpiO2dDQUxaLEFBR0ksQUFDSSxBQUNJLEFBU1A7QUFUTztBQUNJLHVCQWY1QixBQUNJLEFBQ0ksQUFPSSxBQWNLLEFBQUssQUFNekI7OzthQTNERDs7Ozs7Ozs7Ozs7dUNBRTRCLGtCQUFBLEFBQVEsUUFBUixBQUFnQix1QixBQUFoQixBQUF1Qzs7aUNBQXpEO0E7aUVBR0MsRUFBRSxXLEFBQUY7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QSxBQU5hOztBQTZEM0IsQUFFRDs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvaG9tZS9hcnR1ci9Eb2N1bWVudHMvZXRoZXJldW1fc29saWRpdHlfZGV2ZWxvcGVyL2Jsb2NrY2hhaW4tYmFzZWQtY3Jvd2RmdW5kaW5nIn0=

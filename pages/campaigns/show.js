@@ -37,29 +37,29 @@ class CampaignShow extends Component {
         const items = [
             {
                 header: manager,
-                meta: "Manager's Address",
-                description: "Manager created this campaign and they can create requests to withdraw money",
+                meta: "Endereco do Gerente",
+                description: "Gerentes criaram essa campanha, e eles podem criar requisicoes para retirar tokens do saldo",
                 style: { overflowWrap: "break-word" }
             },
             {
                 header: minimumContribution,
-                meta: "Minium Contribution (Wei)",
-                description: "This is the minium amount you need to contribute to become an approver"
+                meta: "Contribuicao Minima (Wei)",
+                description: "Essa deve ser a quantidade minima da contribuicao para se tornar parte do projeto"
             },
             {
                 header: requestsCount,
-                meta: "Number of requests",
-                description: "A request tries to withdraw money from the contract. It must be approved by the approvers"
+                meta: "Numero de Requisicoes",
+                description: "Uma requisicao para retirar tokens do saldo do projeto. Deve ser aprovada pelos membros"
             },
             {
                 header: approversCount,
-                meta: "Number of approvers",
-                description: "Number of people that already donated to this campaign"
+                meta: "Numero de Aprovacoes",
+                description: "Numero de pessoas que ja contribuiram com esse projeto"
             },
             {
                 header: web3.utils.fromWei(balance, "ether"),
-                meta: "Campaign Balance (In Ether)",
-                description: "The balance is how much money this campaign still has available to spend"
+                meta: "Saldo do Projeto (Wei)",
+                description: "O saldo representa a quantidade de tokens ainda disponiveis dentro do projeto"
             }
         ];
 

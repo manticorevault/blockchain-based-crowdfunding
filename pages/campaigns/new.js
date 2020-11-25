@@ -35,21 +35,21 @@ class CampaignNew extends Component {
     render() {
         return (
             <Layout>
-                <h3> Create a Campaign </h3>
-                
-                <Form onSubmit={this.onSubmit} error={ !!this.state.errorMessage }>
+                <h3> Criar um Projeto </h3>
+
+                <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
                     <Form.Field>
-                        <label>Minimum Contribution</label>
-                        <Input 
-                            label="wei" 
+                        <label>Contribuicao Minima</label>
+                        <Input
+                            label="wei"
                             labelPosition="right"
                             value={this.state.minimumContribution}
-                            onChange={event => 
+                            onChange={event =>
                                 this.setState({ minimumContribution: event.target.value })}
-                        /> 
+                        />
                     </Form.Field>
-                    <Message error header="Whoopsie!" content={ this.state.errorMessage } />
-                    <Button loading={ this.state.loading }primary>Create </Button>
+                    <Message error header="Whoopsie!" content={this.state.errorMessage} />
+                    <Button loading={this.state.loading} primary>Create </Button>
                 </Form>
             </Layout>
 
